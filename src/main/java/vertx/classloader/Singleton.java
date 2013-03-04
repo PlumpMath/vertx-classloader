@@ -5,9 +5,9 @@ public class Singleton {
 		System.out.println("Singleton constructor");
 	}
 
-	private static Singleton instance;
+	private static Singleton instance = new Singleton();
 
 	public static Singleton getInstance() {
-		return instance == null ? instance = new Singleton() : instance;
+		return instance;
 	}
 }
