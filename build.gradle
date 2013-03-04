@@ -18,3 +18,8 @@ dependencies {
   compile "org.vert-x:vertx-core:2.0.0-SNAPSHOT"
   compile "org.vert-x:vertx-platform:2.0.0-SNAPSHOT"
 }
+
+task copyToJars(type: Copy) {
+  into "$rootDir/jars"
+  from configurations.runtime
+}
